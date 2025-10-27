@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import {Link} from 'react-router-dom'
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -13,22 +14,30 @@ function Navbar() {
           </a>
         </div>
         <div className="hidden md:flex space-x-10">
+          <Link to = "/">
            <button className="relative group px-6 py-3 overflow-hidden">
             <span className="relative z-10 text-gray-200 ">Home</span>
             <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-purple-500 transition-all duration-100 group-hover:w-full  hover:text-purple-500"></div>
           </button>
+          </Link>
+          <Link to="/About">
           <button className="relative group px-6 py-3 overflow-hidden">
             <span className="relative z-10 text-gray-200 ">About</span>
             <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-purple-500 transition-all duration-100 group-hover:w-full  hover:text-purple-500"></div>
           </button>
+          </Link>
+          <Link to="/Projects">
           <button className="relative group px-6 py-3 overflow-hidden">
             <span className="relative z-10 text-gray-200 ">Projects</span>
             <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-purple-500 transition-all duration-100 group-hover:w-full  hover:text-purple-500"></div>
           </button>
+          </Link>
+          <Link to="/Contact">
           <button className="relative group px-6 py-3 overflow-hidden">
             <span className="relative z-10 text-gray-200 ">Contact</span>
             <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-purple-500 transition-all duration-100 group-hover:w-full  hover:text-purple-500"></div>
           </button>
+          </Link>
         </div>
 
         {/* Hamburger Mobile */}
@@ -76,24 +85,28 @@ function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-2 pt-2 pb-3 space-y-1 bg-gradient-to-r from-blue-400 to-purple-600">
+          
           <a
             href="/"
             className="block px-3 py-2 bg-transparent rounded hover:bg-[#1a1a1a]  text-white"
           >
             Home
           </a>
+         
           <a
             href="/About"
             className="block px-3 py-2 bg-transparent rounded hover:bg-[#1a1a1a] text-white"
           >
             About
           </a>
+         
           <a
             href="/Services"
             className="block px-3 py-2 bg-transparent rounded hover:bg-[#1a1a1a] text-white"
           >
-            Services
+            Tools
           </a>
+          
           <a
             href="/Contact"
             className="block px-3 py-2 bg-transparent rounded hover:bg-[#1a1a1a] text-white"

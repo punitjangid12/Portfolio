@@ -1,5 +1,5 @@
 
-// import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './Components/Navbar';
@@ -16,7 +16,13 @@ import Footer from './Components/Footer';
 function App() {
   return (
     <div className='bg-gradient-to-t from-blue-400 via-pink-500 to-purple-500'>
-  <Navbar />    
+  <Navbar />  
+    <Routes>
+        
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>  
   <Home />
   <Tools />
   <About />
